@@ -1,0 +1,316 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #25352e;
+  background: #f7f7f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+
+  --hotel-forest: #173f35;
+  --hotel-forest-deep: #102e27;
+  --hotel-forest-light: #285648;
+  --hotel-sage: #dfe9df;
+  --hotel-gold: #c6a56b;
+  --hotel-gold-light: #e8d8b8;
+  --hotel-cream: #f7f7f2;
+  --hotel-white: #ffffff;
+  --hotel-ink: #25352e;
+  --hotel-muted: #78847d;
+  --hotel-border: #e5e9e2;
+  --hotel-shadow: 0 10px 30px rgba(23, 63, 53, 0.07);
+  --hotel-radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--hotel-cream);
+  color: var(--hotel-ink);
+}
+
+#app {
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(198, 165, 107, 0.55);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #d8e4d8;
+  color: var(--hotel-forest);
+}
+
+h1,
+h2,
+h3,
+h4,
+.hotel-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--hotel-forest-deep);
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: -0.8px;
+}
+
+h2 {
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  line-height: 1.7;
+}
+
+a {
+  color: var(--hotel-forest);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #997641;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Premium buttons */
+
+button:not(:disabled) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-primary,
+.primary-btn,
+button.btn-primary {
+  border: 1px solid var(--hotel-forest);
+  border-radius: 9px;
+  padding: 12px 20px;
+  background: var(--hotel-forest);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(23, 63, 53, 0.12);
+}
+
+.btn-primary:hover,
+.primary-btn:hover {
+  background: var(--hotel-forest-deep);
+  border-color: var(--hotel-forest-deep);
+  transform: translateY(-1px);
+}
+
+.btn-secondary,
+.secondary-btn {
+  border: 1px solid var(--hotel-border);
+  border-radius: 9px;
+  padding: 11px 18px;
+  background: white;
+  color: var(--hotel-forest);
+  font-weight: 600;
+}
+
+.btn-secondary:hover,
+.secondary-btn:hover {
+  border-color: var(--hotel-gold);
+  background: #fbfaf6;
+}
+
+/* Form controls */
+
+input,
+select,
+textarea {
+  max-width: 100%;
+  border: 1px solid #dce3db;
+  border-radius: 9px;
+  padding: 12px 14px;
+  background: white;
+  color: var(--hotel-ink);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9aa49d;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--hotel-gold);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(198, 165, 107, 0.13);
+}
+
+label {
+  color: var(--hotel-forest-deep);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Reusable cards */
+
+.card,
+.dashboard-card,
+.stat-card,
+.room-card,
+.booking-card {
+  border: 1px solid rgba(229, 233, 226, 0.9);
+  border-radius: var(--hotel-radius);
+  background: var(--hotel-white);
+  box-shadow: var(--hotel-shadow);
+}
+
+.card,
+.dashboard-card,
+.stat-card {
+  padding: 22px;
+}
+
+.card:hover,
+.room-card:hover,
+.booking-card:hover {
+  box-shadow: 0 14px 36px rgba(23, 63, 53, 0.1);
+}
+
+/* Tables */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+thead {
+  background: #f0f4ed;
+}
+
+th {
+  padding: 14px 16px;
+  color: var(--hotel-forest);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.45px;
+}
+
+td {
+  padding: 15px 16px;
+  border-bottom: 1px solid var(--hotel-border);
+  color: var(--hotel-ink);
+  font-size: 0.92rem;
+}
+
+tbody tr:hover {
+  background: #fafbf7;
+}
+
+/* Scrollbars */
+
+* {
+  scrollbar-color: #b9c9bc #f2f4ee;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f4ee;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #b9c9bc;
+}
+
+/* Responsive layout helpers */
+
+@media (max-width: 768px) {
+  h1 {
+    letter-spacing: -0.4px;
+  }
+
+  .card,
+  .dashboard-card,
+  .stat-card {
+    padding: 16px;
+  }
+
+  table {
+    min-width: 600px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
