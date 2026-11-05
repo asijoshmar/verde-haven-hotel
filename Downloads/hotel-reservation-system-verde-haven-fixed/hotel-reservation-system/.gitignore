@@ -1,0 +1,7 @@
+
+# Local secrets and generated files
+**/node_modules/
+**/dist/
+**/.env
+**/.env.*
+!**/.env.example
